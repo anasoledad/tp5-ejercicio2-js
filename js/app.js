@@ -163,8 +163,12 @@ function capturaDatos(e) {
 
     formulario.reset();
 }
-function generacion() {
 
+let btnMostrarGeneracion = getElementById('btnMostraGeneracion');
+btnMostrarGeneracion.addEventListener('submit', generacion);
+
+function generacion(e) {
+    e.preventDefault();
     const nombre = document.getElementById('inputNombre').value;
     const anioNacimiento = parseInt(document.getElementById('inputNacimiento').value);
 
@@ -175,8 +179,8 @@ function generacion() {
 
 }
 
-function esMayor() {
-
+function esMayor(e) {
+    e.preventDefault();
     const nombre = document.getElementById('inputNombre').value;
     const edad = parseInt(document.getElementById('inputEdad').value);
 
